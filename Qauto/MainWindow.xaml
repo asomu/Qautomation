@@ -1,0 +1,26 @@
+﻿<Window x:Name="Qauto" x:Class="Qauto.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Qauto" Height="350" Width="525" ResizeMode="NoResize"
+        Icon="iconfinder_Taxi_2638300.png">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="116*"/>
+            <ColumnDefinition Width="108*"/>
+            <ColumnDefinition Width="69*"/>
+            <ColumnDefinition Width="226*"/>
+        </Grid.ColumnDefinitions>
+        <Button Content="Connect" HorizontalAlignment="Left" VerticalAlignment="Top" Width="96" Margin="10,28,0,0" Height="27" FontSize="14"/>
+        <Button Content="Backup QCN" HorizontalAlignment="Left" VerticalAlignment="Top" Width="96" Margin="10,73,0,0" Height="27" FontSize="14"/>
+        <Label Content="" Grid.Column="1" HorizontalAlignment="Left" Height="30" Margin="10,25,0,0" VerticalAlignment="Top" Width="64" FontSize="14"/>
+        <Label Content="Name" Grid.Column="2" HorizontalAlignment="Left" Height="30" Margin="10,25,0,0" VerticalAlignment="Top" Width="64" FontSize="14" Grid.ColumnSpan="2"/>
+        <TextBox Grid.Column="1" HorizontalAlignment="Left" Height="30" Margin="10,73,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="86" FontSize="14"/>
+        <Label Content="Mode" Grid.Column="2" HorizontalAlignment="Left" Height="30" Margin="10,70,0,0" VerticalAlignment="Top" Width="64" FontSize="14" Grid.ColumnSpan="2"/>
+        <Label Content="Build ID" Grid.Column="2" HorizontalAlignment="Left" Height="30" Margin="10,117,0,0" VerticalAlignment="Top" Width="64" FontSize="14" Grid.ColumnSpan="2"/>
+        <Label Content="Device" Grid.Column="2" HorizontalAlignment="Left" Height="30" Margin="10,168,0,0" VerticalAlignment="Top" Width="64" FontSize="14" Grid.ColumnSpan="2"/>
+        <Label Content="" Grid.Column="3" HorizontalAlignment="Left" Height="30" Margin="5,25,0,0" VerticalAlignment="Top" Width="197" FontSize="14"/>
+        <Label Content="" Grid.Column="3" HorizontalAlignment="Left" Height="30" Margin="5,70,0,0" VerticalAlignment="Top" Width="197" FontSize="14"/>
+        <Label Content="" Grid.Column="3" HorizontalAlignment="Left" Height="30" Margin="5,117,0,0" VerticalAlignment="Top" Width="197" FontSize="14"/>
+        <Label Content="" Grid.Column="3" HorizontalAlignment="Left" Height="30" Margin="5,168,0,0" VerticalAlignment="Top" Width="197" FontSize="14"/>
+    </Grid>
+</Window>

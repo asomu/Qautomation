@@ -1,0 +1,13 @@
+D:\WorkSpace\QAutomation\Qauto\bin\Debug\Qauto.exe.config
+D:\WorkSpace\QAutomation\Qauto\bin\Debug\Qauto.exe
+D:\WorkSpace\QAutomation\Qauto\bin\Debug\Qauto.pdb
+D:\WorkSpace\QAutomation\Qauto\obj\Debug\Qauto.csprojResolveAssemblyReference.cache
+D:\WorkSpace\QAutomation\Qauto\obj\Debug\MainWindow.baml
+D:\WorkSpace\QAutomation\Qauto\obj\Debug\MainWindow.g.cs
+D:\WorkSpace\QAutomation\Qauto\obj\Debug\App.g.cs
+D:\WorkSpace\QAutomation\Qauto\obj\Debug\Qauto_MarkupCompile.cache
+D:\WorkSpace\QAutomation\Qauto\obj\Debug\Qauto.g.resources
+D:\WorkSpace\QAutomation\Qauto\obj\Debug\Qauto.Properties.Resources.resources
+D:\WorkSpace\QAutomation\Qauto\obj\Debug\Qauto.csproj.GenerateResource.Cache
+D:\WorkSpace\QAutomation\Qauto\obj\Debug\Qauto.exe
+D:\WorkSpace\QAutomation\Qauto\obj\Debug\Qauto.pdb
