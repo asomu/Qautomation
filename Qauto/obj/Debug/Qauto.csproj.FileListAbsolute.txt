@@ -11,3 +11,5 @@ D:\WorkSpace\QAutomation\Qauto\obj\Debug\Qauto.Properties.Resources.resources
 D:\WorkSpace\QAutomation\Qauto\obj\Debug\Qauto.csproj.GenerateResource.Cache
 D:\WorkSpace\QAutomation\Qauto\obj\Debug\Qauto.exe
 D:\WorkSpace\QAutomation\Qauto\obj\Debug\Qauto.pdb
+D:\WorkSpace\QAutomation\Qauto\obj\Debug\Interop.AtmnServer.dll
+D:\WorkSpace\QAutomation\Qauto\obj\Debug\Qauto.csproj.ResolveComReference.cache

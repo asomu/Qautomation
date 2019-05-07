@@ -1,26 +1,34 @@
 ﻿<Window x:Name="Qauto" x:Class="Qauto.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Qauto" Height="350" Width="525" ResizeMode="NoResize"
+        Title="Qauto" Height="348" Width="547" ResizeMode="NoResize"
         Icon="iconfinder_Taxi_2638300.png">
-    <Grid>
+    <Grid RenderTransformOrigin="0.5,0.5">
+        <Grid.RenderTransform>
+            <TransformGroup>
+                <ScaleTransform/>
+                <SkewTransform/>
+                <RotateTransform Angle="-0.016"/>
+                <TranslateTransform/>
+            </TransformGroup>
+        </Grid.RenderTransform>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="116*"/>
-            <ColumnDefinition Width="108*"/>
-            <ColumnDefinition Width="69*"/>
-            <ColumnDefinition Width="226*"/>
+            <ColumnDefinition Width="151*"/>
+            <ColumnDefinition Width="113*"/>
+            <ColumnDefinition Width="80*"/>
+            <ColumnDefinition Width="327*"/>
+            <ColumnDefinition Width="6*"/>
         </Grid.ColumnDefinitions>
-        <Button Content="Connect" HorizontalAlignment="Left" VerticalAlignment="Top" Width="96" Margin="10,28,0,0" Height="27" FontSize="14"/>
-        <Button Content="Backup QCN" HorizontalAlignment="Left" VerticalAlignment="Top" Width="96" Margin="10,73,0,0" Height="27" FontSize="14"/>
-        <Label Content="" Grid.Column="1" HorizontalAlignment="Left" Height="30" Margin="10,25,0,0" VerticalAlignment="Top" Width="64" FontSize="14"/>
-        <Label Content="Name" Grid.Column="2" HorizontalAlignment="Left" Height="30" Margin="10,25,0,0" VerticalAlignment="Top" Width="64" FontSize="14" Grid.ColumnSpan="2"/>
-        <TextBox Grid.Column="1" HorizontalAlignment="Left" Height="30" Margin="10,73,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="86" FontSize="14"/>
-        <Label Content="Mode" Grid.Column="2" HorizontalAlignment="Left" Height="30" Margin="10,70,0,0" VerticalAlignment="Top" Width="64" FontSize="14" Grid.ColumnSpan="2"/>
-        <Label Content="Build ID" Grid.Column="2" HorizontalAlignment="Left" Height="30" Margin="10,117,0,0" VerticalAlignment="Top" Width="64" FontSize="14" Grid.ColumnSpan="2"/>
-        <Label Content="Device" Grid.Column="2" HorizontalAlignment="Left" Height="30" Margin="10,168,0,0" VerticalAlignment="Top" Width="64" FontSize="14" Grid.ColumnSpan="2"/>
-        <Label Content="" Grid.Column="3" HorizontalAlignment="Left" Height="30" Margin="5,25,0,0" VerticalAlignment="Top" Width="197" FontSize="14"/>
-        <Label Content="" Grid.Column="3" HorizontalAlignment="Left" Height="30" Margin="5,70,0,0" VerticalAlignment="Top" Width="197" FontSize="14"/>
-        <Label Content="" Grid.Column="3" HorizontalAlignment="Left" Height="30" Margin="5,117,0,0" VerticalAlignment="Top" Width="197" FontSize="14"/>
-        <Label Content="" Grid.Column="3" HorizontalAlignment="Left" Height="30" Margin="5,168,0,0" VerticalAlignment="Top" Width="197" FontSize="14"/>
+        <Button Content="Connect" HorizontalAlignment="Left" VerticalAlignment="Top" Width="96" Margin="10,28,0,0" Height="27" FontSize="14" Click="Button_Click"/>
+        <Button Content="Backup QCN" HorizontalAlignment="Left" VerticalAlignment="Top" Width="96" Margin="10,25,0,0" Height="27" FontSize="14" Grid.Column="2" Grid.ColumnSpan="2" Click="Button_Click_1"/>
+        <Label Content="Name" HorizontalAlignment="Left" Height="30" Margin="25,126,0,0" VerticalAlignment="Top" Width="64" FontSize="14"/>
+        <TextBox x:Name="TBackupQCN" Grid.Column="3" HorizontalAlignment="Left" Height="30" Margin="66,25,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="86" FontSize="14"/>
+        <Label Content="Mode" HorizontalAlignment="Left" Height="30" Margin="25,171,0,0" VerticalAlignment="Top" Width="64" FontSize="14"/>
+        <Label Content="Build ID" HorizontalAlignment="Left" Height="30" Margin="25,218,0,0" VerticalAlignment="Top" Width="64" FontSize="14"/>
+        <Label Content="Device" HorizontalAlignment="Left" Height="30" Margin="25,266,0,0" VerticalAlignment="Top" Width="64" FontSize="14"/>
+        <Label x:Name="Lname" Content="" HorizontalAlignment="Left" Height="30" Margin="100,126,0,0" VerticalAlignment="Top" Width="197" FontSize="14" Grid.ColumnSpan="3"/>
+        <Label x:Name="Lmode" Content="" HorizontalAlignment="Left" Height="30" Margin="100,171,0,0" VerticalAlignment="Top" Width="197" FontSize="14" Grid.ColumnSpan="3"/>
+        <Label x:Name="LbuildID" Content="" HorizontalAlignment="Left" Height="30" Margin="100,218,0,0" VerticalAlignment="Top" Width="561" FontSize="14" Grid.ColumnSpan="4"/>
+        <Label x:Name="Ldevice" Content="" HorizontalAlignment="Left" Height="30" Margin="100,269,0,0" VerticalAlignment="Top" Width="197" FontSize="14" Grid.ColumnSpan="3"/>
     </Grid>
 </Window>
