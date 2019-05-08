@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Microsoft.Win32;
 using AtmnServer;
+using System.Threading;
 
 namespace Qauto
 {
@@ -78,14 +79,15 @@ namespace Qauto
 
             if (serialcomm != null)
             {
-
-
                 foreach (string devices in serialcomm.GetValueNames())
                 {
-                    string portName = serialcomm.GetValue(devices).ToString().Replace("\0", "");                    
-                    _portList.Add(new SerialPortInfo(portName, devices));                                      
+                    string portName = serialcomm.GetValue(devices).ToString().Replace("\0", "");
+                    _portList.Add(new SerialPortInfo(portName, devices));
                 }
             }
+            else
+                ConnectedPortName = null;
+
             foreach (SerialPortInfo sm8150_port in _portList)
             {
                 if (sm8150_port.Device.Contains("LGSIDIAG1") || sm8150_port.Device.Contains("LGANDNETDIAG1"))
@@ -104,9 +106,20 @@ namespace Qauto
  
             if (ConnectedPortName != "")
             {                
+                
                 var ats = new AtmnServer.AtmnServer();
+                
                 var port_list = ats.GetPortList();
+                if(ats.GetPort(ConnectedPortName) == null)
+                {
+                    ats.AddPort(ConnectedPortName, ConnectedPortName);
+                    Thread.Sleep(2000);
+                }
+                
                 var port = ats.GetPort(ConnectedPortName);
+                var prov = port.Provisioning;
+                var meid = prov.GetNVItem(10);
+                Ldate.Content = meid[0];
                 Ldevice.Content = port.DeviceName();
                 Lname.Content = port.PortName();
                 Lmode.Content = port_mode[port.PhoneMode()];
@@ -117,6 +130,13 @@ namespace Qauto
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
+            getPortInfo();
+            var ats = new AtmnServer.AtmnServer();
+            QpstAutoApi QApi = new QpstAutoApi(ats, ConnectedPortName);
+//            QApi.BackupQcn();
+
+
+            
             if (ConnectedPortName != "")
             {
                 var spc = "000000";
@@ -127,6 +147,46 @@ namespace Qauto
                     sw.BackupNV(TBackupQCN.Text, spc);
             }
             
+        }
+
+        private void RemoveEFS_Click(object sender, RoutedEventArgs e)
+        {
+            getPortInfo();
+            if (ConnectedPortName != "")
+            {
+
+                var ats = new AtmnServer.AtmnServer();                
+                if (ats.GetPort(ConnectedPortName) == null)
+                {
+                    ats.AddPort(ConnectedPortName, ConnectedPortName);
+                    Thread.Sleep(2000);
+                }
+
+                var port = ats.GetPort(ConnectedPortName);
+                try
+                {
+//                    port.Reset();
+                    var efs = port.EFS;
+                    MessageBox.Show(efs.EFSVersion.ToString());
+//                    efs.Delete(@"rfsw_debug/lge_rf_init");
+                    efs.CreateDirectoryAndWriteFile(@"rfsw_debug/test/test.txt   ", @"C:/rfsw.txt");
+
+                }
+                catch(Exception ex)
+                {
+                    MessageBox.Show(ex.ToString());
+                }                
+                
+            }
+        }
+
+        private void TestButton_Click(object sender, RoutedEventArgs e)
+        {
+            getPortInfo();
+            var ats = new AtmnServer.AtmnServer();            
+            QpstAutoApi QApi = new QpstAutoApi(ats, ConnectedPortName);
+            byte[] NvDate = QApi.GetNvItem(Convert.ToInt32(inputID.Content));
+            nvResult.Content = NvDate[0];
         }
     }
 }
