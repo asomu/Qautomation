@@ -1,0 +1,10 @@
+D:\WorkSpace\QAutomation\QuickQPST\bin\Debug\QuickQPST.exe.config
+D:\WorkSpace\QAutomation\QuickQPST\obj\Debug\Interop.AtmnServer.dll
+D:\WorkSpace\QAutomation\QuickQPST\obj\Debug\QuickQPST.csproj.ResolveComReference.cache
+D:\WorkSpace\QAutomation\QuickQPST\bin\Debug\QuickQPST.exe
+D:\WorkSpace\QAutomation\QuickQPST\bin\Debug\QuickQPST.pdb
+D:\WorkSpace\QAutomation\QuickQPST\bin\Debug\Qauto.exe
+D:\WorkSpace\QAutomation\QuickQPST\bin\Debug\Qauto.pdb
+D:\WorkSpace\QAutomation\QuickQPST\obj\Debug\QuickQPST.csprojResolveAssemblyReference.cache
+D:\WorkSpace\QAutomation\QuickQPST\obj\Debug\QuickQPST.exe
+D:\WorkSpace\QAutomation\QuickQPST\obj\Debug\QuickQPST.pdb

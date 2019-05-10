@@ -104,7 +104,7 @@ namespace Qauto
         {
             getPortInfo();
  
-            if (ConnectedPortName != "")
+            if (ConnectedPortName != null)
             {                
                 
                 var ats = new AtmnServer.AtmnServer();
@@ -187,6 +187,7 @@ namespace Qauto
             QpstAutoApi QApi = new QpstAutoApi(ats, ConnectedPortName);
             byte[] NvDate = QApi.GetNvItem(Convert.ToInt32(inputID.Content));
             nvResult.Content = NvDate[0];
+            ats = null;
         }
     }
 }

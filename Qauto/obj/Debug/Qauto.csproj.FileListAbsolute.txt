@@ -1,7 +1,6 @@
 D:\WorkSpace\QAutomation\Qauto\bin\Debug\Qauto.exe.config
 D:\WorkSpace\QAutomation\Qauto\bin\Debug\Qauto.exe
 D:\WorkSpace\QAutomation\Qauto\bin\Debug\Qauto.pdb
-D:\WorkSpace\QAutomation\Qauto\obj\Debug\Qauto.csprojResolveAssemblyReference.cache
 D:\WorkSpace\QAutomation\Qauto\obj\Debug\MainWindow.baml
 D:\WorkSpace\QAutomation\Qauto\obj\Debug\MainWindow.g.cs
 D:\WorkSpace\QAutomation\Qauto\obj\Debug\App.g.cs

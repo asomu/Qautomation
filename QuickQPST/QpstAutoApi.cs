@@ -4,8 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using AtmnServer;
+using System.Threading;
 
-namespace Qauto
+namespace QuickQPST
 {
     class QpstAutoApi
     {
@@ -50,15 +51,20 @@ namespace Qauto
             this.PortNum = PortNum;
             this.AddPort(PortNum);
             this.GetPort();
+
+            this.GetDeviceInfo();
         }
 
         public void AddPort(string PortNum)
         {
             if (this.atm.GetPort(PortNum) == null)
-                this.atm.AddPort(PortNum, PortNum);
-            else
             {
                 this.RemovePort();
+                this.atm.AddPort(PortNum, PortNum);
+                Thread.Sleep(1500);
+            }
+            else
+            {
                 this.atm.AddPort(PortNum, PortNum);
             }
 
@@ -82,13 +88,32 @@ namespace Qauto
 
         public byte[] GetNvItem(int id)
         {
-            var prov = this.Port.Provisioning;
-            return prov.GetNVItem(id);
+            try
+            {
+                var prov = this.Port.Provisioning;
+                return prov.GetNVItem(id);
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                return null;
+            }
+            
         }
         public void BackupQcn()
         {
-            var sw = Port.SoftwareDownload;
-            sw.BackupNV(@"c:\test.xqcn", 000000);
+            try
+            {
+                var sw = Port.SoftwareDownload;
+                
+                var FilneName = string.Format(@"C:\Users\User\Desktop\{0}_{1}.xqcn", DeviceName, DateTime.Now);
+                sw.BackupNV(FilneName, "000000");
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            
         }
         public void RestoreQcn()
         {
@@ -106,11 +131,11 @@ namespace Qauto
         }
         public void GetDeviceInfo()
         {
-            if (this.atm.GetPort(PortNum) != null)
+            if (this.Port != null)
             {
-                this.DeviceName = Port.DeviceName();
-                this.Mode = Port.PhoneMode();
-                this.BuildId = this.port_mode[Port.BuildId()];
+                this.DeviceName = this.Port.DeviceName();
+                this.Mode = this.port_mode[Port.PhoneMode()];
+                this.BuildId = this.Port.BuildId();
             }
         }
 
