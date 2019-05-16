@@ -106,7 +106,7 @@ namespace QuickQPST
             {
                 var sw = Port.SoftwareDownload;
                 
-                var FilneName = string.Format(@"C:\Users\User\Desktop\{0}_{1}.xqcn", DeviceName, DateTime.Now);
+                var FilneName = string.Format(@"C:\Users\User\Desktop\{0}_{1}.xqcn", DeviceName, DateTime.Now.Second);
                 sw.BackupNV(FilneName, "000000");
             }
             catch(Exception ex)

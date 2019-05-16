@@ -83,24 +83,22 @@ namespace QuickQPST
             }
         }
 
-        static void Main(string[] args)
+        public void runAuto(string[] args, string portName)
         {
-            var pr = new Program();
-            pr.getPortInfo();
             var ats = new AtmnServer.AtmnServer();
-            QpstAutoApi Qapi = new QpstAutoApi(ats, pr.ConnectedPortName);
+            QpstAutoApi Qapi = new QpstAutoApi(ats, portName);
             byte[] ret = null;
             if (args.Length >= 1)
             {
                 if (args[0] == "backup")
                     Qapi.BackupQcn();
-                else if(args[0] == "info")
+                else if (args[0] == "info")
                 {
-                    Console.WriteLine("Device : {0}",Qapi.DeviceName);
-                    Console.WriteLine("Mode   : {0}",Qapi.Mode);
-                    Console.WriteLine("Build  : {0}",Qapi.BuildId);
+                    Console.WriteLine("Device : {0}", Qapi.DeviceName);
+                    Console.WriteLine("Mode   : {0}", Qapi.Mode);
+                    Console.WriteLine("Build  : {0}", Qapi.BuildId);
                 }
-                else if(args[0] == "nv")
+                else if (args[0] == "nv")
                 {
                     if (args[1] != null)
                     {
@@ -118,11 +116,17 @@ namespace QuickQPST
                             else if (args[1] == "569")
                                 Console.WriteLine("You need to calibrate DUT!!!");
                         }
-                        
+
                     }
                 }
             }
             Console.WriteLine("Done....");
+        }
+        static void Main(string[] args)
+        {
+            var pr = new Program();
+            pr.getPortInfo();
+            pr.runAuto(args, pr.ConnectedPortName);
         }
     }
 }
