@@ -1,10 +1,10 @@
-# QPST automatin
+# QPST automation
 
 ## 참고문서
 80-PA177-1 RevA
 
 ## 개요
-QPST API를 이용하여 QPST 기능을 custom 하여 자동화할 수 있다.
+QPST API를 이용하여 QPST 기능을 custumize 하여 자동화할 수 있다.
 
 ## 위치
 C:\Program Files (x86)\Qualcomm\QPST\Automation Samples
