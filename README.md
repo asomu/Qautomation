@@ -1,17 +1,12 @@
 # QPST automatin
 
 ## 참고문서
-
 80-PA177-1 RevA
 
 ## 개요
-
 QPST API를 이용하여 QPST 기능을 custom 하여 자동화할 수 있다.
 
-## QPST automation sample
-
 ## 위치
-
 C:\Program Files (x86)\Qualcomm\QPST\Automation Samples
 
 ## Key API
@@ -27,7 +22,6 @@ C:\Program Files (x86)\Qualcomm\QPST\Automation Samples
 10. Phone reset
 11. EFS file remove and write
 
-# 추가 구현
-
+## 추가 구현
 - EFS 가져오기, 그리고 정보 읽기
 - MIPI 정보, RFSW debug 정보
