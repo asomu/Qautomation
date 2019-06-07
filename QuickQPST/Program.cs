@@ -119,9 +119,17 @@ namespace QuickQPST
 
                     }
                 }
+                else if (args[0] == "delete")
+                {
+                    if (args[1] != null)
+                    {
+                        Qapi.efs_unlink(args[1]);
+                    }
+                }
             }
             Console.WriteLine("Done....");
         }
+
         static void Main(string[] args)
         {
             var pr = new Program();

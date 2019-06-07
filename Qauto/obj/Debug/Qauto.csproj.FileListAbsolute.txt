@@ -12,3 +12,5 @@ D:\WorkSpace\QAutomation\Qauto\obj\Debug\Qauto.exe
 D:\WorkSpace\QAutomation\Qauto\obj\Debug\Qauto.pdb
 D:\WorkSpace\QAutomation\Qauto\obj\Debug\Interop.AtmnServer.dll
 D:\WorkSpace\QAutomation\Qauto\obj\Debug\Qauto.csproj.ResolveComReference.cache
+D:\WorkSpace\QAutomation\Qauto\obj\Debug\Qauto.csproj.CoreCompileInputs.cache
+D:\WorkSpace\QAutomation\Qauto\obj\Debug\Qauto.csprojAssemblyReference.cache

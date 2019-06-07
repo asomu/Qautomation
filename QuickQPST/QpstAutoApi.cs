@@ -139,5 +139,27 @@ namespace QuickQPST
             }
         }
 
+        public void efs_unlink(string path)
+        {
+            try
+            {
+                if (this.Port != null)
+                {
+                    var efs = this.Port.EFS;
+                    if (efs.EFSVersion == 2)
+                    {
+                        Console.WriteLine(path);
+                        efs.Delete(path);
+//                        efs.Delete(@"/nv/item_files/rfnv/00027324");
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+
+        }
+
     }
 }

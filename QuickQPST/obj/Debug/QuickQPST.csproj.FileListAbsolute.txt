@@ -5,6 +5,9 @@ D:\WorkSpace\QAutomation\QuickQPST\bin\Debug\QuickQPST.exe
 D:\WorkSpace\QAutomation\QuickQPST\bin\Debug\QuickQPST.pdb
 D:\WorkSpace\QAutomation\QuickQPST\bin\Debug\Qauto.exe
 D:\WorkSpace\QAutomation\QuickQPST\bin\Debug\Qauto.pdb
-D:\WorkSpace\QAutomation\QuickQPST\obj\Debug\QuickQPST.csprojResolveAssemblyReference.cache
 D:\WorkSpace\QAutomation\QuickQPST\obj\Debug\QuickQPST.exe
 D:\WorkSpace\QAutomation\QuickQPST\obj\Debug\QuickQPST.pdb
+D:\WorkSpace\QAutomation\QuickQPST\bin\Debug\Qauto.exe.config
+D:\WorkSpace\QAutomation\QuickQPST\obj\Debug\QuickQPST.csprojAssemblyReference.cache
+D:\WorkSpace\QAutomation\QuickQPST\obj\Debug\QuickQPST.csproj.CoreCompileInputs.cache
+D:\WorkSpace\QAutomation\QuickQPST\obj\Debug\QuickQPST.csproj.CopyComplete

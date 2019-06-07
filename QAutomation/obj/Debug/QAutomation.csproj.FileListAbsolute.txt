@@ -5,4 +5,5 @@ D:\WorkSpace\QAutomation\QAutomation\obj\Debug\Interop.AtmnServer.dll
 D:\WorkSpace\QAutomation\QAutomation\obj\Debug\QAutomation.csproj.ResolveComReference.cache
 D:\WorkSpace\QAutomation\QAutomation\obj\Debug\QAutomation.exe
 D:\WorkSpace\QAutomation\QAutomation\obj\Debug\QAutomation.pdb
-D:\WorkSpace\QAutomation\QAutomation\obj\Debug\QAutomation.csprojResolveAssemblyReference.cache
+D:\WorkSpace\QAutomation\QAutomation\obj\Debug\QAutomation.csprojAssemblyReference.cache
+D:\WorkSpace\QAutomation\QAutomation\obj\Debug\QAutomation.csproj.CoreCompileInputs.cache
