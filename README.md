@@ -4,8 +4,6 @@
 
 80-PA177-1 RevA
 
-[80-pa177-1_a_qpst_automation_application_notes.pdf](https://www.notion.so/e4f21feece3f4471884d08b71c385440#96fa84521e064e4c9874d67bd98ace3b)
-
 ## 개요
 
 QPST API를 이용하여 QPST 기능을 custom 하여 자동화할 수 있다.
@@ -22,12 +20,7 @@ C:\Program Files (x86)\Qualcomm\QPST\Automation Samples
 
 Source
 
-[asomu/Qautomation](https://github.com/asomu/Qautomation)
-
 ## Key API
-
-[API Class code](https://www.notion.so/23bea1b272ed4933abe609e548d7e4fc)
-
 1. Add COM Port
 2. Remove COM Port
 3. Enable/Disable Port
